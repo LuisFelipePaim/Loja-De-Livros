@@ -57,9 +57,14 @@
             padding: .5rem 5rem;
             border-radius: 5px;
             border: 0;
-            transition: .2s;
+            transition: .3s;
             &:active {
                 @include input;
+            }
+            &:hover {
+                // box-shadow: 4px 4px 5px $light-gray-hover;
+                cursor: pointer;
+                transform: translateY(-.25em);
             }
             &:nth-child(3):hover {
                 cursor: pointer;
@@ -79,5 +84,14 @@
         &-a {
             @include link;
         }
+    }
+}
+
+input[type=submit] {
+
+    transition: .3s;
+    &:hover {
+        background-color: $light-gray-hover;
+        cursor: pointer;
     }
 }

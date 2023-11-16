@@ -648,12 +648,16 @@ input::-webkit-inner-spin-button {
   padding: 0.5rem 5rem;
   border-radius: 5px;
   border: 0;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .plogin_div-input:active {
   border: 0;
   outline: 0;
   box-shadow: 0;
+}
+.plogin_div-input:hover {
+  cursor: pointer;
+  transform: translateY(-0.25em);
 }
 .plogin_div-input:nth-child(3):hover {
   cursor: pointer;
@@ -676,6 +680,14 @@ input::-webkit-inner-spin-button {
 }
 .plogin_div-a:hover {
   color: rgb(194, 194, 194);
+}
+
+input[type=submit] {
+  transition: 0.3s;
+}
+input[type=submit]:hover {
+  background-color: rgb(194, 194, 194);
+  cursor: pointer;
 }
 
 * {
