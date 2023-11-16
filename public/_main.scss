@@ -1,0 +1,223 @@
+@import './variaveis';
+
+body {
+    background-color: $body-color;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+
+    &_destaques {
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: 50% 50%;
+        gap: 1rem;
+        padding: 0;
+        padding-top: 2rem;
+        height: 35rem;
+        width: 80%;
+        margin-bottom: 20rem;
+        color: $white;
+        
+        
+        &-cards {
+            text-align: center;
+            background-color: $white;
+            
+        }
+
+        &-cards:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        &-cards:nth-child(2) {
+           background-image: url(./assets/main_card_edluxo.JPG);
+           @include flex_column_spacebetween;
+           @include fundo_card;
+        }
+        &-cards:nth-child(3) {
+            background-image: url(./assets/main_card_box.jpg);
+            @include flex_column_spacebetween;
+            @include fundo_card;
+    
+        }
+        &-cards:nth-child(4){
+           background-image: url(./assets/main_card_promocao.jpg);
+            @include flex_column_spacebetween;
+            @include fundo_card
+        }
+        &-cards:nth-child(5){
+            background-image: url(./assets/main_card_mais.png);
+            @include flex_column_spacebetween;
+            @include fundo_card;
+        }
+        &-cards:nth-child(6){
+           
+        }
+        &_titulo {
+            background-image: linear-gradient($gray, $transparent);
+            height: 2rem;
+            padding: .5rem 0 0 0;
+
+        }
+        &_link {
+            background-image: linear-gradient($transparent, $gray);
+            height: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 0 0 .5rem 0;
+        }
+        
+    }
+}
+
+.destaques{
+    @include fundo_card;
+    background-image: url(./assets/main_cards_destaque.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $white;
+    transition: 1s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    &_imagem{
+       
+
+        &-img {
+            width: 70%;
+            height: 60%;
+            transition: .5s;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        &-a {
+            transition: .5s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }   
+    
+    }
+    &_titulo {
+        padding: 2%;
+        background-image: linear-gradient($gray, $transparent);
+        height: 4rem;
+        
+    }
+    &_link {
+        background-image: linear-gradient($transparent, $gray);
+        height: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-a {
+            text-decoration: none;
+            color: $white;
+            transition: .5s;
+            &:hover {
+                color: $gray;
+            }
+        }
+    }
+
+}
+
+.guia {
+
+    &_div {
+        background-color: $light-gray-hover;
+        height: 17rem;
+        &_titulo {
+            color: $white; 
+            padding: 1rem 0 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        &_conteudo {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1rem 0 0 0 ;
+            &-div {
+                display: flex;
+                justify-content: center;
+                height: 12rem;
+                width: 9rem;
+                transition: .5s;
+                backdrop-filter: blur(10px);
+
+                
+                &:nth-child(1) {
+                    background-image: url(./assets/guia_01.jpg);
+                    @include fundo_card;
+                }
+                &:nth-child(2) {
+                    background-image: url(./assets/guia_02.jpg);
+                    @include fundo_card;
+                }
+                &:nth-child(3) {
+                    background-image: url(./assets/guia_03.jpg);
+                    @include fundo_card
+                }
+                &:nth-child(4) {
+                    background-image: url(./assets/guia_04.jpg);
+                    @include fundo_card
+                }
+                &:nth-child(5) {
+                    background-image: url(./assets/guia_05.jpg);
+                    @include fundo_card
+                }
+                &:nth-child(6) {
+                    background-image: url(./assets/guia_06.jpg);
+                    @include fundo_card
+                }
+                &:nth-child(7) {
+                    background-image: url(./assets/guia_07.jpg);
+                    @include fundo_card
+                }
+                &:nth-child(8) {
+                    background-image: url(./assets/guia_08.jpg);
+                    @include fundo_card
+                }
+                &:hover {
+                    cursor: pointer;
+                    vertical-align: middle;                    
+                }
+            }
+            &-a {
+                color: transparent;                
+                transition: .5s;
+                width: 100%;
+                text-decoration: none;
+                padding: 50px 0 0 25px;
+                &:hover {
+                    color: $white;
+                    border: 2px black;
+                    align-items: center;
+                    backdrop-filter: brightness(50%) ;
+                }
+                & p {
+                    padding: 7px 0 0 0;
+                }
+                & p:nth-child(3){
+                }
+            }
+        }
+    }
+}

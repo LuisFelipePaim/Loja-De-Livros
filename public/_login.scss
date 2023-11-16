@@ -1,0 +1,83 @@
+@import './variaveis';
+
+.pbody {
+    height: 1vh;
+}
+
+.pmain {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.pheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    height: 5rem;
+    &_img {
+        width: 10rem;
+        height: 50%;
+        background-image: url('./assets/logoLoja.png');
+        @include fundo_card;
+    }
+}
+
+.pfooter {
+    background-color: $primary-color;
+    height: 10rem;
+}
+
+.plogin {
+    background-color: $primary-color;
+    width: 35%;
+    border-radius: 5px;
+    padding: 2rem 0 ;
+    margin: 3rem 0;
+    &_div {
+        display: flex;
+        justify-content: center;
+        &-p {
+            color: $white;
+        }
+        &-form {
+            display: flex;
+            flex-direction: column;
+            & div {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem 0 0 0;
+                color: $white;
+            }
+            
+        }
+        &-input {
+            margin: .5rem 0 0 0;
+            padding: .5rem 5rem;
+            border-radius: 5px;
+            border: 0;
+            transition: .2s;
+            &:active {
+                @include input;
+            }
+            &:nth-child(3):hover {
+                cursor: pointer;
+                background-color: $light-gray-hover;
+            }
+        }
+        &:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 2rem 0 0 0;
+        }
+        &-texto {
+            margin: .5rem 0;
+        }
+        &-a {
+            @include link;
+        }
+    }
+}

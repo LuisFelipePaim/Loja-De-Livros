@@ -1,0 +1,147 @@
+@import './variaveis';
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+}
+
+.produto {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(20%, 5);
+    grid-template-rows: repeat(25%, 4);
+    width: 80%;
+    height: 35rem;
+
+    &_div {
+
+        &_imagem {
+            grid-column: 1 / 2;
+            grid-row: 1 / 5;
+        }
+        &_descricao {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            padding: 0 2rem 0 2rem;
+            &-h3 {
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding-bottom: 1rem;
+            }
+            &-p {
+                line-height: 1.4rem;
+            }
+        }
+        &_preco {
+            background-color: $white;
+            width: 20rem;
+            border-radius: 5px;
+            &:nth-child(1) {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(50%, 2);
+            }
+            &:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            &:nth-child(3) {
+                display: flex;
+                justify-content: center;
+            }
+            &-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            &-p {
+                font-size: 1.4rem;
+                margin-bottom: .5rem;
+                font-weight: bold;
+            }
+            &-a {
+                margin-top: 3rem;
+                color: $heavy-gray;
+                transition: .5s;
+                &:hover {
+                    color: $gray;
+                }
+            }
+            &-button {
+                background-color: $button;
+                border: 0;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: bold;
+                width: 90%;
+                height: 4rem;
+                border-radius: 2px;
+                transition: .5s;
+                &:hover {
+                    background-color: $button_hover;
+                    cursor: pointer;
+                }
+            }
+            &-frete {
+                padding: 1rem;
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+            &-input {
+                margin: 1rem;
+                padding: .5rem 4rem;
+                border-radius: 5px;
+                border: 1px solid $black;
+                transition: .5s;
+                &:hover {
+                    background-color: $light-gray;
+                    cursor: pointer;
+                    appearance: none;
+                }
+                &:active {
+                    border: 0;
+                    outline: 0;
+                    box-shadow: 0;
+
+                }
+            }
+            &-enviado {
+                padding: 2rem;
+            }
+            &-bookstore {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+    &_div:nth-child(1) {
+        grid-column: 1 /5;
+        grid-row: 1 / 5;
+        width: 90%;
+        background-color: $white;
+        display: grid;
+        grid-template-columns: repeat(50%, 2);
+        grid-template-rows: repeat(25%, 4);
+        padding: 1.5rem;
+        border-radius: 5px;
+    }
+
+    &_div:nth-child(2) {
+        grid-column: 5 / 6;
+        grid-row: 1 / 5; 
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 20% 20%;
+        gap: 5%;
+    }
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Faça o Login</title>
+</head>
+<body>
+<%- include('headerCad'); -%>
+<main class="pmain">
+    <div class="plogin">
+        <div class="plogin_div">
+            <p class="plogin_div-p">Faça o Cadastro</p>
+        </div>
+        <div class="plogin_div">
+            <form class="plogin_div-form" action="/auth/register" method="POST">
+                <div>    
+                    <label for="name">Digite seu nome:</label>
+                    <input class="plogin_div-input" id="name" type="text">
+                </div>
+                <div>
+                       <label for="email">Digite seu email:</label> 
+                    <input class="plogin_div-input" id="email" type="text">
+                </div>
+                <div>
+                    <label for="senha">Digite sua senha</label>
+                    <input class="plogin_div-input" id="senha" type="text">
+                </div>
+                <div>
+                    <input class="plogin_div-input" type="submit">
+                </div>
+            </form>
+        </div>
+        <div class="plogin_div">
+            <div class="plogin_div-texto">
+                <a class="plogin_div-a" href="#">Conectar com:</a>    
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('footerCad'); -%>
+</body>
+</html>

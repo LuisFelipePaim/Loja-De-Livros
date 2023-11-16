@@ -1,0 +1,72 @@
+@mixin fundo_card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin link {
+    text-decoration: none;
+    color: $white;
+    transition: .5s;
+
+    &:hover {
+        color: $light-gray-hover;
+    }
+}
+
+@mixin flex_column_spacebetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin flex_column_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin esconder_elemento {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin aparecer_elemento {
+    height: 1rem;
+    width: 1rem;
+    margin: 0;
+    overflow: visible;
+    position: fixed;
+    
+}
+
+@mixin input {
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+}
+
+// Cores do site
+
+$primary-color: rgba(34, 147, 223, 0.808);
+$secondary-color: rgb(64, 134, 240);
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+$light-gray: rgb(228, 228, 228);
+$light-gray-hover: rgb(194, 194, 194);
+$gray: rgb(148, 148, 148);
+$heavy-gray: rgb(99, 99, 99);
+
+$body-color: rgb(216, 216, 216);
+
+$button: rgb(252, 39, 39);
+$button_hover: rgb(204, 32, 32);
+
+$transparent: rgba(0, 0, 0, 0);

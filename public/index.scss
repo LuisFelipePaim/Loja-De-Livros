@@ -1,0 +1,17 @@
+@import './reset';
+@import './header';
+@import './footer';
+@import './main';
+@import './produto';
+@import './login';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: block;
+}
