@@ -470,6 +470,14 @@ input::-webkit-inner-spin-button {
   grid-column: 1/2;
   grid-row: 1/5;
 }
+.produto_div_imagem-img {
+  background-image: url("./assets/guia_01.jpg");
+  width: 13rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+}
 .produto_div_descricao {
   grid-column: 2/3;
   grid-row: 1/3;
@@ -688,6 +696,99 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: rgb(194, 194, 194);
   cursor: pointer;
+}
+
+.pagamento {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  color: rgb(99, 99, 99);
+}
+.pagamento-img {
+  height: 17rem;
+  width: 80%;
+  background-image: url("./assets/meios_pagamento.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pagamento_texto {
+  width: 80%;
+  display: flex;
+  vertical-align: baseline;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(148, 148, 148);
+  padding: 2.5rem 0 3rem 0;
+}
+.pagamento_texto-h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding: 0 0 0.5rem 0;
+}
+.pagamento_texto-p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+.pagamento_imagem {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 0 0;
+  padding: 0 0 2rem 0;
+  width: 80%;
+  border-bottom: 1px solid rgb(148, 148, 148);
+}
+.pagamento_imagem-imgC:nth-child(1) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/cartao1.jpg");
+  width: 20%;
+  height: 10rem;
+}
+.pagamento_imagem-imgC:nth-child(2) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/cartao2.jpg");
+  width: 20%;
+  height: 10rem;
+}
+.pagamento_imagem-imgC:nth-child(3) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/cartao3.jpg");
+  width: 20%;
+  height: 10rem;
+}
+.pagamento_imagem-imgC:nth-child(4) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/cartao4.jpg");
+  width: 20%;
+  height: 10rem;
+}
+.pagamento_imagem:nth-child(2) {
+  justify-content: space-evenly;
+}
+.pagamento_imagem-imgB:nth-child(1) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/Boleto1.jpg");
+  width: 30%;
+  height: 15rem;
+}
+.pagamento_imagem-imgB:nth-child(2) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/boleto2.jpg");
+  width: 45%;
+  height: 15rem;
 }
 
 * {

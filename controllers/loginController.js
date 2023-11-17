@@ -20,7 +20,7 @@ class LoginController {
 
 module.exports = new LoginController();
 
-exports.register = (req, res) => {
-    console.log(req.body);
-    res.send("Form submitted")
-}
+// exports.register = (req, res) => {
+//     console.log(req.body);
+//     res.send("Form submitted")
+// }

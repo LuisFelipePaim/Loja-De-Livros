@@ -24,6 +24,12 @@ margin: 0;
         &_imagem {
             grid-column: 1 / 2;
             grid-row: 1 / 5;
+            &-img {
+                background-image: url('./assets/guia_01.jpg');
+                width: 13rem;
+                @include fundo_card;
+                height: 20rem;
+            }
         }
         &_descricao {
             grid-column: 2 / 3;

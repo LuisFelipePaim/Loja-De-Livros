@@ -4,7 +4,7 @@ class LoginModel {
 
     listar() {
         const sql = "SELECT * FROM usuarios"
-        return new Promisse((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             conexao.query(sql, {}, (error,resposta) => {
                 if(error) {
                     console.log("Deu erro ao listar");
@@ -55,6 +55,11 @@ class LoginModel {
                 resolve(resposta);
             })
         })
+    }
+
+    listarUsuarios() {
+        const sql = 'SELECT * FROM usuarios';
+        
     }
 }
 

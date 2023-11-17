@@ -1,0 +1,90 @@
+@import './variaveis';
+
+
+.pagamento {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    color: $heavy-gray;
+
+    &:nth-child(1) {
+    }
+    &-img {
+        height: 17rem;
+        width: 80%;
+        background-image: url('./assets/meios_pagamento.png');
+        @include fundo_card;
+    }
+    &_texto {
+        width: 80%;
+        display: flex;
+        vertical-align:baseline;
+        flex-direction: column;
+        border-bottom: 1px solid $gray;
+        padding: 2.5rem 0 3rem 0;
+        &-h3 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            padding: 0 0 .5rem 0;
+        }
+        &-p {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+    }
+    &_imagem {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0 0 0;
+        padding: 0 0 2rem 0;
+        width: 80%;
+        border-bottom: 1px solid $gray;
+        &-imgC {
+            &:nth-child(1) {
+                @include fundo_card;
+                background-image: url('./assets/cartao1.jpg');
+                width: 20%;
+                height: 10rem;
+            }
+            &:nth-child(2) {
+                @include fundo_card;
+                background-image: url('./assets/cartao2.jpg');
+                width: 20%;
+                height: 10rem;
+            }
+            &:nth-child(3) {
+                @include fundo_card;
+                background-image: url('./assets/cartao3.jpg');
+                width: 20%;
+                height: 10rem;
+            }
+            &:nth-child(4) {
+                @include fundo_card;
+                background-image: url('./assets/cartao4.jpg');
+                width: 20%;
+                height: 10rem;
+            }
+        }
+        &:nth-child(2) {
+            justify-content: space-evenly;
+        }
+        &-imgB {
+            &:nth-child(1) {
+                @include fundo_card;
+                background-image: url('./assets/Boleto1.jpg');
+                width: 30%;
+                height: 15rem;
+            }
+            &:nth-child(2) {
+                @include fundo_card;
+                background-image: url('./assets/boleto2.jpg');
+                width: 45%;
+                height: 15rem;
+            }
+            
+        } 
+    }
+    
+}
