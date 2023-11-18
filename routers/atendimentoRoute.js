@@ -5,7 +5,7 @@ const loginController = require("../controllers/loginController");
 const { listar } = require("../models/livrosModel");
 const { listarUsuarios } = require("../models/loginModel");
 const { conexao } = require("../infraestrutura/tabela");
-
+const { criarUsuario, obterUsuarios, acessar } = require('../desespero')
 router.get('/', (req, res) => {
     res.render("../views/login")
 })
@@ -16,6 +16,21 @@ router.post('/', (req,res) => {
 
 router.get('/paginaInicial', (req,res) => {
     res.render('../views/index')
+})
+
+router.post('/cadastrar-user', (req, res) => {
+    criarUsuario(req.body)
+    return res.status(201).json()
+})
+
+router.post('/login', async (req, res) => {
+    console.log(req)
+    const acesso = await acessar(req.body.email, req.body.senha) 
+    return res.status(acesso ? 200 : 401).json()
+})
+
+router.get('/consultar-user', async (req, res) => { 
+    return res.status(201).json(await obterUsuarios())
 })
 
 
@@ -75,5 +90,9 @@ router.delete('/livros/:id', (req, res) => {
 
 router.get('/meiosPagamento', (req, res) => {
     res.render('../views/meiosPagamento')
+})
+
+router.get('/sobre_nos', (req, res) => {
+    res.render('../views/sobre_nos')
 })
 module.exports = router;

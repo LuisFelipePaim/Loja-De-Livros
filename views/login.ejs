@@ -24,7 +24,7 @@
                     <input class="plogin_div-input" id="senha" type="text">
                 </div>
                 <div>
-                    <input class="plogin_div-input" type="submit">
+                    <button id="loginbutton" type="button" class="plogin_div-inpu">Acessar</button>
                 </div>
             </form>
         </div>
@@ -37,6 +37,30 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        const loginButton = document.getElementById('loginbutton');
+        const mensagem = document.getElementById('mensagem');
+
+loginButton.addEventListener('click', async () => {
+  const email = document.getElementById('email').value;
+  const senha = document.getElementById('senha').value;
+
+        try {
+            const response = await axios.post('http://localhost:3000/login', {
+            email: email,
+            senha: senha
+            });
+            
+            // Lógica para lidar com a resposta após a requisição ser feita
+            console.log('Login bem-sucedido!');
+        } catch (error) {
+            // Se ocorrer um erro na requisição
+            console.error('Erro:', error);
+        }
+        }); 
+    </script>
 </main>
 
 <%- include('footerCad'); -%>
